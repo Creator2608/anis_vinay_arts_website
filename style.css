@@ -44,11 +44,11 @@ select {
 :root {
     --black: #111111;
     --dark: #181818;
-    --cream: #f7f7f5;
+    --cream: #e7e711;
     --white: #ffffff;
-    --orange: #ff271f;
-    --orange-dark: #d9140d;
-    --gray: #707070;
+    --orange: #ffa51f;
+    --orange-dark: #0d98d9;
+    --gray: #00103b;
     --light-gray: #e7e7e3;
 
     --container: 1180px;
@@ -223,8 +223,8 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid rgba(255,255,255,0.25);
-    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
     padding: 9px 15px;
     border-radius: 100px;
     font-size: 11px;
@@ -1082,5 +1082,157 @@ nav a:hover {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+/* =========================================
+   SERVICE SLIDESHOW
+   ========================================= */
+
+.slideshow img {
+    opacity: 1;
+    transition: opacity 0.25s ease, transform 0.7s ease;
+}
+
+
+/* Slight zoom while hovering */
+
+.slideshow:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Smooth image container */
+
+.service-image {
+    cursor: pointer;
+}
+/* ==========================================
+   WEDDING IMAGE SLIDESHOW
+   ========================================== */
+
+.service-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    position: relative;
+    cursor: pointer;
+    background: #111;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.7s ease;
+}
+
+.service-image:hover img {
+    transform: scale(1.08);
+}
+/* FIX SERVICE SLIDESHOW IMAGE */
+
+.service-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    position: relative;
+    background: #eeeeee;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.service-image:hover img {
+    transform: scale(1.05);
+}
+/* ==========================================
+   PREMIUM SERVICE IMAGE EFFECT
+   ========================================== */
+
+.service-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+    margin-bottom: 25px;
+    background: #111;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.7s ease;
+
+    opacity: 1;
+}
+
+/* Elegant zoom */
+
+.service-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Dark premium overlay */
+
+.service-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.25),
+        transparent 60%
+    );
+
+    pointer-events: none;
+}
+
+
+/* Card hover */
+
+.service-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image slightly grows with card */
+
+.service-card:hover .service-image img {
+    transform: scale(1.06);
 }
 
