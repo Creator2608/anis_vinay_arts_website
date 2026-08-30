@@ -1235,4 +1235,67 @@ nav a:hover {
 .service-card:hover .service-image img {
     transform: scale(1.06);
 }
+/* ==========================================
+   AVARTS LOGO - NAME + TAGLINE
+   ========================================== */
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo-name > span {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.logo-name small {
+    display: block;
+    margin-top: 5px;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #aaa;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+}
+/* ===== FINAL AVARTS LOGO FIX ===== */
+
+.navbar .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.navbar .logo-name {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+.navbar .logo-title {
+    display: block !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+.navbar .logo-tagline {
+    display: block !important;
+    margin-top: 5px !important;
+    font-size: 8px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.3px !important;
+    color: #aaa !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
 
